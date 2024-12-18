@@ -1,0 +1,15 @@
+version: 2
+models:
+  - name: stg_coaches
+    description: "Staging model for coaches in serie A"
+    columns:
+      - name: coach_id
+        description: "The id of the coach"
+        tests:
+          - not_null
+          - unique
+      - name: coach_name
+        description: "The name of the coach"
+        tests:
+          - not_null
+          - unique    

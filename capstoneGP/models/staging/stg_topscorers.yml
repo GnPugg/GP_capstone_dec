@@ -1,0 +1,25 @@
+version: 2
+models:
+  - name: stg_topscorer
+    description: "Staging model for top scorer data"
+    columns:
+      - name: team_name
+        description: "The name of the team"
+        tests:
+          - not_null
+          - unique
+      - name: team_id
+        description: "Unique identifier for the team"
+        tests:
+          - not_null
+          - unique
+      - name: player_name
+        description: "The name of the player"
+        tests:
+          - not_null
+      - name: matches_played
+        description: "The number of matches played by the player"
+        tests:
+          - not_null
+          - expression_is_true:
+              expression: "matches_played >= 0"

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_stadiums
+    columns:
+
+      - name: venue
+        description: The name of the stdium
+        tests:
+          - not_null
+      - name: venue_capacity
+        description: The capacity of the stdium
+        tests:
+          - not_null
+              

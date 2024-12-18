@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: serieaA_teams_data
+    database: seriea_db  # Replace with your database name
+    schema: raw              # Replace with your schema name
+    tables:
+      - name: serie_a_teams         # The raw table name in Snowflake

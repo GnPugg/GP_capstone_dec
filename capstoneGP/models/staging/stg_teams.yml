@@ -1,0 +1,15 @@
+version: 2
+models:
+  - name: stg_teams
+    description: "Staging model for teams in serie A"
+    columns:
+      - name: team_id
+        description: "The id of the team"
+        tests:
+          - not_null
+          - unique
+      - name: team_name
+        description: "The name of the team"
+        tests:
+          - not_null
+          - unique    

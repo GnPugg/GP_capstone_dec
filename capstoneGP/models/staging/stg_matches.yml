@@ -1,0 +1,26 @@
+version: 2
+models:
+  - name: stg_matches
+    description: "Staging model for matches of the teams in Serie A"
+    columns:
+      - name: home_team
+        description: "The name of the home team"
+        tests:
+          - not_null    
+      - name: away_team
+        description: "The name of the away team"
+        tests:
+          - not_null
+      - name: home_score
+        description: "Home team score"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      - name: away_score
+        description: "Away team score"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+          

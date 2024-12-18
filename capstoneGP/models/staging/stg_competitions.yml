@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: stg_competitions
+    description: "Staging model for competitions serie A might be part of"
+    columns:
+      - name: competition_name
+        description: "The name of the competition"
+        tests:
+          - not_null
+          - unique    

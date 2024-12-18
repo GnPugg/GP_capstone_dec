@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: matches_data
+    database: seriea_db  # Replace with your database name
+    schema: raw              # Replace with your schema name
+    tables:
+      - name: matches         # The raw table name in Snowflake

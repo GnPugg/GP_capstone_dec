@@ -1,0 +1,27 @@
+version: 2
+
+seeds:
+  - name: alltimetopscorer
+    description: "Seed table for top scorers with goals, team, nationality, and season."
+    columns:
+      - name: Season
+        description: "The season of the competition."
+        tests:
+          - not_null
+      - name: Nationality
+        description: "The nationality of the top scorer."
+        tests:
+          - not_null
+      - name: Topscorer
+        description: "The name of the top scorer."
+        tests:
+          - not_null
+      - name: Team
+        description: "The team to which the top scorer belongs."
+        tests:
+          - not_null
+      - name: Goals
+        description: "The number of goals scored by the top scorer."
+        tests:
+          - not_null
+          
