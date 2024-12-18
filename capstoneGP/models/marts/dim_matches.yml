@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_matches
+    columns:
+
+      - name: match_id
+        description: The id of the match
+        tests:
+          - not_null
+          - unique
