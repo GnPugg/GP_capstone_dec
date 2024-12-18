@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_teams
+    description: "Dimension table for teams"
+    columns:
+      - name: team_id
+        description: "Unique identifier for the team"
+        tests:
+          - unique
+          - not_null
+
+      - name: year_founded
+        description: "The year the team was founded"
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 1800  # Set an appropriate minimum value
+              max_value: 2024  # Set an appropriate maximum value
+              inclusive: true
