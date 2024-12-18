@@ -1,0 +1,15 @@
+version: 2
+
+seeds:
+  - name: venuecapacity
+    description: "Seed table for top stadiums and their capacity."
+    columns:
+      - name: Venue
+        description: "The name of the stadium."
+        tests:
+          - not_null
+          - unique
+      - name: Capacity
+        description: "The capacity of the venue, in thousands."
+        tests:
+          - not_null
