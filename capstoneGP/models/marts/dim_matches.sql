@@ -3,9 +3,9 @@
 WITH source AS (
     SELECT 
         match_id,
+        matchday,
         home_score,
         away_score,
-        matchday,
         match_date,
         home_team,
         away_team,
